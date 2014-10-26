@@ -1,2 +1,2 @@
-﻿1 linha modificada
+﻿1 linha
 outra linha
