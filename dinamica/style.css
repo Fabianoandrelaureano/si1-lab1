@@ -1,0 +1,26 @@
+h1{
+   text-align: center;
+}
+
+h2{
+   text-align: center;
+}
+		
+form{
+	text-align: center;
+	padding-top: 50px;
+}
+
+#temas{
+	font-weight: bold;
+}
+
+#select-from{
+	width: 25%
+	
+}
+
+#select-to{
+	width: 25%
+
+}

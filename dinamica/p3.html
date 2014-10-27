@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dinamica</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+  $("#btn").click(function(){
+    $('#select-to').append("<option value='"+$(tema).val()+"'>"+$(tema).val()+"</option>");
+  });
+
+  $('#btn-add').click(function(){
+        $('#select-to option:selected').each( function() {
+            $(this).remove();
+        });
+    });
+    $('#btn-remove').click(function(){
+        $('#select-to option:selected').each( function() {
+            $('#select-from').append("<option value='"+$(this).val()+"'>"+$(this).text()+"</option>");
+            $(this).remove();
+        });
+    });
+
+
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand" href="#">SI 1</a>
+  </div>
+</div>
+
+<div class="hero-unit">
+
+<form>
+
+    <select name="selectfrom" id="select-from" multiple size="20">
+      <option>Temas Aprendidos</option>
+	  <option></option>
+    </select>
+
+    <a href="JavaScript:void(0);" id="btn-remove">&laquo; Aprendido</a>
+
+    <select name="selectto" id="select-to" multiple size="20">
+      <option>Temas a Aprender</option>
+	  <option></option>
+    </select>
+    
+    <a href="JavaScript:void(0);" id="btn-add">Remover &raquo;</a>
+ 
+</form>
+
+<br>
+
+<input id="tema" name = "caixa" type="text" placeholder="Novo tema" required>
+		<a href="JavaScript:void(0);" <button id="btn">Add</button></a>
+
+<br>
+<br>
+<br>
+
+<a href="index.html"><button type="submit" class="btn btn-inverse btn-medium">Voltar para pagina inicial</button</a>
+
+</div>
+
+</body>
+</html>
